@@ -1,9 +1,3 @@
-//package predatorprey2;
-
-/**
- *
- * @author Tessa King-Inniss
- */
 public class CreatureStatus {
     private int xPos;
     private int yPos;
