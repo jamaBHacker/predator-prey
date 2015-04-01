@@ -1,0 +1,15 @@
+//package predatorprey2;
+
+public class EatingException extends Exception
+ {
+
+    public EatingException()
+	{
+		super("A creature ate somthing deadly");
+    }
+
+    public EatingException(String msg) 
+	{
+        super(msg);
+    }
+}
