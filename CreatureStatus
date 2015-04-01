@@ -1,0 +1,51 @@
+//package predatorprey2;
+
+/**
+ *
+ * @author Tessa King-Inniss
+ */
+public class CreatureStatus {
+    private int xPos;
+    private int yPos;
+    private boolean isActive;   //determines if the creature is alive
+    private int creatureID;
+    
+    public CreatureStatus(int id, boolean status, int x, int y)
+    {
+        creatureID = id;
+        xPos = x;
+        yPos = y;
+        isActive = status;
+    }
+    
+    public void setPosition(int x, int y)
+    {
+        xPos = x;
+        yPos = y;
+    }
+    
+    public int getXPos()
+    {
+        return xPos;
+    }
+
+    public int getYPos()
+    {
+        return yPos;
+    }
+    
+    public void setActive(boolean status)
+    {
+        isActive = status;
+    }
+
+    public boolean isActive()
+    {
+        return isActive;
+    }
+    
+    public int getCreatureID()
+    {
+        return creatureID;
+    }
+}
