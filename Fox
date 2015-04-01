@@ -1,0 +1,70 @@
+//package predatorprey2;
+
+/**
+ import java.util.ArrayList;
+
+public class Fox extends Creature implements PredBehaviour
+{
+    protected int starveTime;
+    protected int huntDuration;
+    protected ArrayList deathFood;
+    
+    public Fox(int ID)
+    {
+        trackingID = ID;
+        type = "fox";
+        symbol = 'F';
+        breedTime = 24;
+        maxOffspring = 2;
+        starveTime = 0;
+        deathFood = new ArrayList();
+        
+        //add appropriate data to deathFood here
+		deathFood.add("frog");
+        
+        isPredator = true;
+    }
+
+    //processes a turn that this predator eats, returning its survival
+    public boolean eat(Creature c) throws EatingException
+    {     
+        boolean survived = true;
+
+     
+        //add functionality
+		if(deathFood.contains(c.type))
+		{
+			survived = false;
+			throw new EatingException("Fox poisoned by frog.");
+		}
+		else
+		{
+			huntDuration = 0;
+		}
+
+       
+        return survived;
+    }
+
+    //Processes a turn that this predator does not eat, returning its survival
+    public boolean starve() 
+    {
+		boolean survival = true;
+        
+        //add functionality
+		if(starveTime >= 10)
+		{
+			survival = false;
+			
+		}
+		
+		else
+		{
+			starveTime++;
+		}
+		
+		return survival;
+    
+    }
+	
+}
