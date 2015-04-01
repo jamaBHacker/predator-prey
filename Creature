@@ -1,0 +1,75 @@
+//package predatorprey2;
+
+/**
+ *
+ * @author Tessa King-Inniss
+ */
+public class Creature extends GamePiece
+{
+   
+    protected int breedTime;  //Contains the number of turns after which a creature may breed
+    protected int maxOffspring; //Contains the maximum number of offspring a creature at breed time
+    protected boolean isPredator; //Indicates whether the creature is a predator or not
+	protected int numMoves;
+    
+    public Creature() 
+    {
+        type = " ";
+        trackingID = 0;
+        symbol = ' ';
+        breedTime = 0;
+        maxOffspring = 0;
+        isPredator = false;
+   
+    }//Creature - constructor
+	
+	
+	public Creature(Creature a)
+	{
+		type = a.getType();
+		trackingID = a.getTrackingID();
+		symbol = a.getSymbol();
+		isPredator = a.isPredator();
+	}//Creature - copy constructor
+
+    public char getSymbol()
+    {
+        return symbol;
+    }
+    
+    public int getTrackingID()
+    {
+        return trackingID;
+    }
+    
+    public String getType()
+    {
+        return type;
+    }
+       
+    public void setSymbol(char s)
+    {
+        symbol = s;
+    }
+    
+    public void setTrackingID(int ID)
+    {
+        trackingID = ID;
+    }
+    
+    public void setType(String t)
+    {
+        type = t;
+    }
+    
+    public boolean isPredator()
+    {
+        return isPredator;
+    }
+	
+	public void setPredatorStatus(boolean s)
+	{
+		isPredator = s;
+	}
+       
+}//GamePiece
